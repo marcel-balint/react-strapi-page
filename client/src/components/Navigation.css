@@ -1,0 +1,47 @@
+
+nav{
+    width: 75%;
+    margin: auto;
+}
+
+.nav-top{
+    display: flex;
+    flex-direction: row;
+    margin-left: 45%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.nav-logo img {
+    width: 7.7rem;
+}
+.nav-profile {
+    display: flex;
+    width: 10rem;
+    justify-content: space-between;
+}
+
+.nav-profile__account img,
+.nav-profile__cart img {
+    width: 2.5rem;
+} 
+
+.nav-profile__account p,
+.nav-profile__cart p {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.nav-profile__account p:hover,
+.nav-profile__cart p:hover {
+    color: #adadad;
+    cursor: pointer;
+}
+
+.nav-profile__account,
+.nav-profile__cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
