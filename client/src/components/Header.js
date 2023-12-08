@@ -6,6 +6,9 @@ import "./Header.css";
 const Header = () => {
   const [headerData, setHeaderData] = useState(null);
   const [headerImage, setHeaderImage] = useState(null);
+  const [hours, setHours] = useState(15);
+  const [minutes, setMinutes] = useState(59);
+  const [seconds, setSeconds] = useState(59);
 
   const getData = async () => {
     try {
@@ -25,6 +28,28 @@ const Header = () => {
   useEffect(() => {
     getData();
   }, []);
+
+  // Timmer
+  let timmer = 59;
+  useEffect(() => {
+    timmer = setInterval(() => {
+      setSeconds(seconds - 1);
+
+      // Decrease minutes if seconds === 0
+      if (seconds === 0) {
+        setMinutes(minutes - 1);
+        setSeconds(59);
+      }
+
+      // Decrease hours if minutes === 0
+      if (minutes === 0) {
+        setHours(hours - 1);
+        setMinutes(59);
+      }
+    }, 1000);
+    return () => clearInterval(timmer);
+  });
+
   return (
     <header>
       <Navigation />
@@ -39,15 +64,15 @@ const Header = () => {
             <h2>Price drops in</h2>
             <div className="time">
               <div className="hours">
-                <p>15</p>
+                <p>{hours}</p>
                 <p>hours</p>
               </div>
               <div className="minutes">
-                <p>15</p>
+                <p>{minutes}</p>
                 <p>minutes</p>
               </div>
               <div className="seconds">
-                <p>15</p>
+                <p>{seconds}</p>
                 <p>seconds</p>
               </div>
             </div>
