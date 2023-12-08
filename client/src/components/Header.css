@@ -1,0 +1,116 @@
+.header-banner {
+    background-color: #000;
+    color: #fff;
+    height: 4.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-banner p {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.header-bottom {
+    width: 75%;
+    height: 40rem;
+    margin: auto;
+    display: flex;
+}
+
+.header-bottom__text,
+.header-bottom__image {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header-bottom__text h1 {
+    font-size: 400%;
+}
+
+.header-bottom__text p {
+    font-size: 2.2rem;
+}
+
+.image-box  {
+    height: 40rem;
+    position: relative;
+}
+
+.image-box img {
+    height: 100%;
+    width: 100%;
+    object-position: bottom;
+    object-fit: cover;
+}
+
+.timmer {
+    display: flex;
+    align-items: center;
+}
+
+.timmer h2 {
+    margin-right: 5rem;
+    font-size: 400%;
+
+}
+.time {
+    display: flex;
+    justify-content: space-between;
+    width: 22rem;
+}
+
+.hours,
+.minutes,
+.seconds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hours p:nth-child(1),
+.minutes p:nth-child(1),
+.seconds p:nth-child(1) {
+    font-weight: bolder;
+    font-size: 2.5rem;
+    padding: 3rem 1.5rem 3rem 1.5rem ;
+    -webkit-box-shadow: 0px 0px 13px 0px rgba(204,204,204,1);
+    -moz-box-shadow: 0px 0px 13px 0px rgba(204,204,204,1);
+    box-shadow: 0px 0px 13px 0px rgba(204,204,204,1);
+}
+
+.hours p:nth-child(2),
+.minutes p:nth-child(2),
+.seconds p:nth-child(2){
+    font-size: 1.3rem;
+    margin-top: -13px;
+}
+
+.action-btns {
+    top: 80%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly
+}
+
+.action-btns button {
+    padding: 2rem;
+    outline: none;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.6rem;
+    cursor: pointer;
+    width: 25rem;
+}
+
+.action-btns button:hover{
+    background-color: #ccc;
+    color: #000;
+}

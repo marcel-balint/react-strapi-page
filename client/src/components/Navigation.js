@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../media/boas_logo.png";
 import profileIcon from "../media/profile_circle.svg";
 import shoppingCart from "../media/shopping_cart.svg";
+import mobileMenu from "../media/menu-mobile.svg";
 
 import "./Navigation.css";
 
@@ -9,6 +10,7 @@ const Navigation = () => {
   return (
     <nav>
       <div className="nav-top">
+        <img className="mobile-menu" src={mobileMenu} alt="Mobile menu" />
         <div className="nav-logo">
           <img src={logo} alt="Logo" />
         </div>
@@ -23,7 +25,7 @@ const Navigation = () => {
           </div>
         </div>
       </div>
-      <div className="nav_bottom">
+      <div className="nav-bottom">
         <ul>
           <li>
             <a href="#">Vintage Women</a>
