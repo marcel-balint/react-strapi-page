@@ -6,52 +6,44 @@ import FitProducts from "./FitProducts";
 import DownloadBanner from "./DownloadBanner";
 import BrandProducts from "./BrandProducts";
 
+// Api call
+const fetchData = async (apiEndpoint) => {
+  try {
+    const response = await fetch(apiEndpoint);
+    const { data } = await response.json();
+    return data?.map((product) => ({
+      title: product?.attributes?.title,
+      image: product?.attributes?.image?.data[0]?.attributes?.url,
+    }));
+  } catch (error) {
+    console.log("Something went wrong.", error);
+    return null;
+  }
+};
+
 const PageContent = () => {
   const [featuredProducts, setFeaturedProducts] = useState(null);
   const [fitProducts, setFitProducts] = useState(null);
-
-  const getFeaturedProducts = async () => {
-    try {
-      const response = await fetch(
-        "http://localhost:1337/api/featured-products?populate=image"
-      );
-      const { data } = await response.json();
-      // Get the title and image from db
-      const products = data?.map((product) => {
-        return {
-          title: product?.attributes?.title,
-          image: product?.attributes?.image?.data[0]?.attributes?.url,
-        };
-      });
-      setFeaturedProducts(products);
-    } catch (error) {
-      console.log("Something went wrong.", error);
-    }
-  };
-
-  const getFitProducts = async () => {
-    try {
-      const response = await fetch(
-        "http://localhost:1337/api/shop-by-fits?populate=image"
-      );
-      const { data } = await response.json();
-      // Get the title and image from db
-      const products = data?.map((product) => {
-        return {
-          title: product?.attributes?.title,
-          image: product?.attributes?.image?.data[0]?.attributes?.url,
-        };
-      });
-      setFitProducts(products);
-      console.log(products);
-    } catch (error) {
-      console.log("Something went wrong.", error);
-    }
-  };
+  const [brandProducts, setBrandProduncts] = useState(null);
 
   useEffect(() => {
-    getFeaturedProducts();
-    getFitProducts();
+    // Get data from different api endpoints
+    const fetchDataProducts = async () => {
+      setFeaturedProducts(
+        await fetchData(
+          "http://localhost:1337/api/featured-products?populate=image"
+        )
+      );
+      setFitProducts(
+        await fetchData("http://localhost:1337/api/shop-by-fits?populate=image")
+      );
+      setBrandProduncts(
+        await fetchData(
+          "http://localhost:1337/api/brand-products?populate=image"
+        )
+      );
+    };
+    fetchDataProducts();
   }, []);
 
   return (
@@ -96,7 +88,7 @@ const PageContent = () => {
       </article>
       <FitProducts fitProducts={fitProducts} />
       <DownloadBanner />
-      <BrandProducts />
+      <BrandProducts brandProducts={brandProducts} />
     </div>
   );
 };

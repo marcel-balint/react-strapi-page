@@ -1,3 +1,13 @@
 .brand-section {
     margin-top: 5rem;
 }
+
+.brand-section__content {
+    width: 75%;
+    margin: auto;
+}
+
+.brand-section__title {
+    font-size: 3rem;
+    font-weight: 500;
+}

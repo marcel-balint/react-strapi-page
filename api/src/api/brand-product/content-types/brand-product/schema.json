@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "shop_by_fits",
+  "collectionName": "brand_products",
   "info": {
-    "singularName": "shop-by-fit",
-    "pluralName": "shop-by-fits",
-    "displayName": "shop_by_fit",
-    "description": ""
+    "singularName": "brand-product",
+    "pluralName": "brand-products",
+    "displayName": "Brand_product"
   },
   "options": {
     "draftAndPublish": true
@@ -16,12 +15,11 @@
       "type": "string"
     },
     "image": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
       "allowedTypes": [
         "images"
-      ]
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
