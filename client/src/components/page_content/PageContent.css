@@ -1,5 +1,66 @@
 .main {
     width: 75%;
     margin: auto;
-    padding-top: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+article {
+    text-align: end;
+}
+.article-content {
+   text-align: -webkit-right;
+}
+.article-image__box{
+    position: relative;
+    height: 20rem;
+    width: 95%;
+}
+.article-image__box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.article-text {
+    top: 50%;
+    left: 43%;
+    transform: translate(-50% , -50%);
+    position: absolute;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.article-text h2 {
+    font-size: 2.25rem;
+}
+.article-para {
+    font-size: 1.4rem;
+    margin-top: -15px;
+    font-weight: 400;
+}
+
+.article-buttons {
+    display: flex;
+}
+
+.article-buttons p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    border: 2px solid #fff;
+    margin-right: 2rem;
+
+}
+
+.article-buttons p span {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.article-buttons p:hover  {
+    color: rgba(137, 196, 244, .3);
+    cursor: pointer;
 }

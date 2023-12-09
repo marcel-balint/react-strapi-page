@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import FeaturedProducts from "./FeaturedProducts";
-
+import jeansBanner from "../../media/large_5jeans.jpg";
 import "./PageContent.css";
 
 const PageContent = () => {
@@ -32,6 +32,43 @@ const PageContent = () => {
   return (
     <div className="main">
       <FeaturedProducts featuredProducts={featuredProducts} />
+      <article>
+        <div className="article-content">
+          <div className="article-image__box">
+            <img src={jeansBanner} alt="Jeans" />
+            <div className="article-text">
+              <h2>Levi's Jeans</h2>
+              <p className="article-para">
+                Browse more than one thousand authentic Vintage Levi's Jeans.
+                Pick your favourite model below.
+              </p>
+              <div className="article-buttons">
+                <p>
+                  <span>501</span>
+                </p>
+                <p>
+                  <span>502</span>
+                </p>
+                <p>
+                  <span>504</span>
+                </p>
+                <p>
+                  <span>505</span>
+                </p>
+                <p>
+                  <span>511</span>
+                </p>
+                <p>
+                  <span>512</span>
+                </p>
+                <p>
+                  <span>550</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
   );
 };

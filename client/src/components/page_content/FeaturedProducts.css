@@ -1,3 +1,10 @@
+.featured-products__carousel {
+    margin-bottom: 7rem;
+}
+
+.slick-slide {
+    height: 40rem;
+}
 .slick-slide div {
      margin-right: 3rem;
 }
@@ -17,7 +24,7 @@
 }
 
 .card{
-    height: 300px;
+    height: 40rem;
 }
 
 .card {
@@ -45,4 +52,8 @@
     color: #fff;
     font-size: 2.3rem;
     font-weight: bold;
+}
+
+.slick-dots li button:before{
+    font-size: 1.4rem;
 }
