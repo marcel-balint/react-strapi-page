@@ -2,7 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import testImage from "../../media/boas_logo.png";
 
 import "./FeaturedProducts.css";
 
@@ -23,7 +22,7 @@ function Arrow(props) {
   );
 }
 
-const FeaturedProducts = () => {
+const FeaturedProducts = ({ featuredProducts }) => {
   // Slider settings
   const settings = {
     dots: true,
@@ -65,33 +64,20 @@ const FeaturedProducts = () => {
       },
     ],
   };
+
+  console.log(featuredProducts);
   return (
     <div className="featured-products__carousel">
       <Slider {...settings}>
-        <div className="card">
-          <img src={testImage} alt="Image" />
-          <p>TITLE</p>
-        </div>
-        <div className="card">
-          <img src={testImage} alt="Image" />
-          <p>TITLE</p>
-        </div>
-        <div className="card">
-          <img src={testImage} alt="Image" />
-          <p>TITLE</p>
-        </div>
-        <div className="card">
-          <img src={testImage} alt="Image" />
-          <p>TITLE</p>
-        </div>
-        <div className="card">
-          <img src={testImage} alt="Image" />
-          <p>TITLE</p>
-        </div>
-        <div className="card">
-          <img src={testImage} alt="Image" />
-          <p>TITLE</p>
-        </div>
+        {/* Render products from db */}
+        {featuredProducts?.map((product, indx) => (
+          <div key={indx} className="card">
+            <img src={`http://localhost:1337${product?.image}`} alt="Image" />
+            <div className="overlay">
+              <p>{product?.title}</p>
+            </div>
+          </div>
+        ))}
       </Slider>
     </div>
   );
