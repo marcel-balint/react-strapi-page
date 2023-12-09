@@ -1,0 +1,169 @@
+.footer{
+    background-color: rgb(236 239 241);
+}
+
+.footer-content{
+    width: 80%;
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+.footer-top{
+    display: flex;
+    color: #5c5c5c;
+    margin-bottom: 2rem;
+}
+
+.footer-top__text{
+    margin-right: 5rem;
+}
+.footer-top__text h3 {
+    margin: 0;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+.footer-top__text p {
+    font-size: 1.5rem;
+    margin-top: 0px;
+}
+
+.footer-top_input input {
+  padding: 1.5rem 1.5rem 1.5rem 1rem;
+  font-size: 1.6rem;
+  background-color: inherit;
+  width: 40rem;
+  margin-right: 1.5rem;
+}
+
+.footer-top_input button{
+    padding: 1.6rem 2rem 1.6rem 2rem;
+    border: none;
+    outline: none;
+    background-color: #3272b7;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.footer-main{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    color: #5c5c5c;
+}
+.footer-main__logo img {
+    height: 40px;
+    margin-right: 1rem;
+}
+
+.download-app{
+    text-align: end;
+}
+.footer-main__present,
+.footer-main__about,
+.press,
+.download-app{
+    flex: 1;
+}
+
+.footer-main__logo{
+    display: flex;
+    align-items: center;
+}
+
+.footer-main__logo h3 {
+    font-size: 1.5rem;
+}
+.footer-main__present  p{
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+}
+
+.footer-main__icons img{
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-main__about,
+.press {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-main__about h2,
+.press h2{
+    text-transform: uppercase;
+}
+
+.footer-main__about ul,
+.press ul {
+    list-style-type: none;
+}
+
+.footer-main__about ul li,
+.press ul li {
+    font-size: 1.6rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.footer-main__about h2{
+    margin-left: -2rem;
+}
+
+.press ul{
+    padding: 0;
+    margin-left: -2rem;
+}
+
+.download-app h2{
+    font-size: 1.7rem;
+}
+
+.mobile-apps{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.mobile-apps img {
+    width: 10rem;
+    cursor: pointer;
+}
+.mobile-apps img:first-child{
+    margin-bottom: 1rem;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright{
+    display: flex;
+}
+
+.copyright img{
+    margin-right: 1rem;
+}
+
+.terms a:first-child{
+    margin-right: 3rem;
+}
+.social img{
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.copyright p,
+.terms {
+    font-size: 1.3rem;
+}
+
+.terms a {
+    text-decoration: none;
+}

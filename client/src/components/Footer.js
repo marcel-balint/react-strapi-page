@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
             <p>
               You've made it to the end! Thanks for taking the time. If you're
-              here because you're lost, feel free to <a href="#">contact us</a>
+              here because you're lost, feel free to <a href="#">contact us </a>
               and we'll get you back on track.
             </p>
             <div className="footer-main__icons">
@@ -82,8 +82,10 @@ const Footer = () => {
           </div>
           <div className="download-app">
             <h2>Download the BOAS app</h2>
-            <img src={iconGooglePlay} alt="GooglePlay" />
-            <img src={iconAppStore} alt="AppStore" />
+            <div className="mobile-apps">
+              <img src={iconGooglePlay} alt="GooglePlay" />
+              <img src={iconAppStore} alt="AppStore" />
+            </div>
           </div>
         </div>
         <div className="footer-bottom">
