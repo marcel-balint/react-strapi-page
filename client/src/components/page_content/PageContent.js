@@ -3,6 +3,7 @@ import FeaturedProducts from "./FeaturedProducts";
 import jeansBanner from "../../media/large_5jeans.jpg";
 import "./PageContent.css";
 import FitProducts from "./FitProducts";
+import DownloadBanner from "./DownloadBanner";
 
 const PageContent = () => {
   const [featuredProducts, setFeaturedProducts] = useState(null);
@@ -93,6 +94,7 @@ const PageContent = () => {
         </div>
       </article>
       <FitProducts fitProducts={fitProducts} />
+      <DownloadBanner />
     </div>
   );
 };
