@@ -5,6 +5,7 @@ import "./PageContent.css";
 import FitProducts from "./FitProducts";
 import DownloadBanner from "./DownloadBanner";
 import BrandProducts from "./BrandProducts";
+import Footer from "../Footer";
 
 // Api call
 const fetchData = async (apiEndpoint) => {
@@ -89,6 +90,7 @@ const PageContent = () => {
       <FitProducts fitProducts={fitProducts} />
       <DownloadBanner />
       <BrandProducts brandProducts={brandProducts} />
+      <Footer />
     </div>
   );
 };
