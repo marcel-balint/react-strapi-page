@@ -1,6 +1,4 @@
 .main {
-    width: 75%;
-    margin: auto;
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
@@ -10,7 +8,9 @@ article {
     margin-bottom: 7rem;
 }
 .article-content {
-   text-align: -webkit-right;
+    width: 75%;
+    margin: auto;
+    text-align: -webkit-right;
 }
 .article-image__box{
     position: relative;

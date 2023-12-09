@@ -4,6 +4,7 @@ import jeansBanner from "../../media/large_5jeans.jpg";
 import "./PageContent.css";
 import FitProducts from "./FitProducts";
 import DownloadBanner from "./DownloadBanner";
+import BrandProducts from "./BrandProducts";
 
 const PageContent = () => {
   const [featuredProducts, setFeaturedProducts] = useState(null);
@@ -95,6 +96,7 @@ const PageContent = () => {
       </article>
       <FitProducts fitProducts={fitProducts} />
       <DownloadBanner />
+      <BrandProducts />
     </div>
   );
 };

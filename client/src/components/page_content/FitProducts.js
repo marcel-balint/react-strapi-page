@@ -66,7 +66,7 @@ const FitProducts = ({ fitProducts }) => {
   };
 
   return (
-    <>
+    <div className="fit-products__section">
       <h2 className="fit-title">Shop by Fit </h2>
 
       <Slider {...settings}>
@@ -79,7 +79,7 @@ const FitProducts = ({ fitProducts }) => {
           </div>
         ))}
       </Slider>
-    </>
+    </div>
   );
 };
 

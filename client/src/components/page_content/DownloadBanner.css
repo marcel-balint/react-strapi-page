@@ -1,10 +1,8 @@
 .download-banner {
     background-color: #eee;
-    width: 100%;
-    height: 20rem;
-    position: absolute;
-    left: 0;
+    height: 30rem;
     margin-bottom: 5rem;
+    display: flex;
 }
 .download-banner__content {
     width: 75%;
@@ -13,9 +11,39 @@
 .flex{
     display: flex;
     height: 20rem;
+    align-items: center;
 }
 
+.banner-text,
+.mobile-app__img {
+    flex: 1;
+}
+
+.banner-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.banner-text h2 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.banner-text p {
+    font-size: 1.5rem;
+    margin-top: -1rem;
+}
+
+.download-icons img:first-child {
+    margin-right: 2rem;
+}
+.mobile-app__img {
+    display: flex;
+    justify-content: end;
+    height: 150%;
+}
 .mobile-app__img img {
     height: 100%;
-    width: 100%;
 }

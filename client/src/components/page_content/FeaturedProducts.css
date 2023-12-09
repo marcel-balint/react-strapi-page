@@ -1,5 +1,7 @@
 .featured-products__carousel {
     margin-bottom: 7rem;
+    width: 75%;
+    margin: auto;
 }
 
 .slick-slide {

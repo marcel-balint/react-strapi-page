@@ -1,3 +1,8 @@
+.fit-products__section {
+    width: 75%;
+    margin: auto;
+}
+
 .slick-track {
  margin-left: 0px;
 }
