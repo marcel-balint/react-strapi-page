@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shop_by_fits",
+  "info": {
+    "singularName": "shop-by-fit",
+    "pluralName": "shop-by-fits",
+    "displayName": "Shop_by_fit"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import "./FeaturedProducts.css";
+import "./FitProducts.css";
 
 // Slider arrows
 function Arrow(props) {
@@ -22,7 +22,7 @@ function Arrow(props) {
   );
 }
 
-const FeaturedProducts = ({ featuredProducts }) => {
+const FitProducts = ({ fitProducts }) => {
   // Slider settings
   const settings = {
     dots: true,
@@ -47,7 +47,7 @@ const FeaturedProducts = ({ featuredProducts }) => {
       {
         breakpoint: 786,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
           initialSlide: 0,
           dots: true,
@@ -66,10 +66,11 @@ const FeaturedProducts = ({ featuredProducts }) => {
   };
 
   return (
-    <div className="featured-products__carousel">
+    <>
+      <h2 className="fit-title">Shop by Fit </h2>
+
       <Slider {...settings}>
-        {/* Render products from db */}
-        {featuredProducts?.map((product, indx) => (
+        {fitProducts?.map((product, indx) => (
           <div key={indx} className="card">
             <img src={`http://localhost:1337${product?.image}`} alt="Image" />
             <div className="overlay">
@@ -78,8 +79,8 @@ const FeaturedProducts = ({ featuredProducts }) => {
           </div>
         ))}
       </Slider>
-    </div>
+    </>
   );
 };
 
-export default FeaturedProducts;
+export default FitProducts;

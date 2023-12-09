@@ -394,6 +394,37 @@ export interface ApiFeaturedProductFeaturedProduct
   };
 }
 
+export interface ApiShopByFitShopByFit extends Schema.CollectionType {
+  collectionName: 'shop_by_fits';
+  info: {
+    singularName: 'shop-by-fit';
+    pluralName: 'shop-by-fits';
+    displayName: 'Shop_by_fit';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    image: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::shop-by-fit.shop-by-fit',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::shop-by-fit.shop-by-fit',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTitleTitle extends Schema.CollectionType {
   collectionName: 'titles';
   info: {
@@ -754,6 +785,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::featured-product.featured-product': ApiFeaturedProductFeaturedProduct;
+      'api::shop-by-fit.shop-by-fit': ApiShopByFitShopByFit;
       'api::title.title': ApiTitleTitle;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;

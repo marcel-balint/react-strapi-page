@@ -2,16 +2,19 @@ import React, { useEffect, useState } from "react";
 import FeaturedProducts from "./FeaturedProducts";
 import jeansBanner from "../../media/large_5jeans.jpg";
 import "./PageContent.css";
+import FitProducts from "./FitProducts";
 
 const PageContent = () => {
   const [featuredProducts, setFeaturedProducts] = useState(null);
+  const [fitProducts, setFitProducts] = useState(null);
 
-  const getData = async () => {
+  const getFeaturedProducts = async () => {
     try {
       const response = await fetch(
         "http://localhost:1337/api/featured-products?populate=image"
       );
       const { data } = await response.json();
+      // Get the title and image from db
       const products = data?.map((product) => {
         return {
           title: product?.attributes?.title,
@@ -19,14 +22,34 @@ const PageContent = () => {
         };
       });
       setFeaturedProducts(products);
-      console.log(featuredProducts);
+    } catch (error) {
+      console.log("Something went wrong.", error);
+    }
+  };
+
+  const getFitProducts = async () => {
+    try {
+      const response = await fetch(
+        "http://localhost:1337/api/shop-by-fits?populate=image"
+      );
+      const { data } = await response.json();
+      // Get the title and image from db
+      const products = data?.map((product) => {
+        return {
+          title: product?.attributes?.title,
+          image: product?.attributes?.image?.data[0]?.attributes?.url,
+        };
+      });
+      setFitProducts(products);
+      console.log(products);
     } catch (error) {
       console.log("Something went wrong.", error);
     }
   };
 
   useEffect(() => {
-    getData();
+    getFeaturedProducts();
+    getFitProducts();
   }, []);
 
   return (
@@ -69,6 +92,7 @@ const PageContent = () => {
           </div>
         </div>
       </article>
+      <FitProducts fitProducts={fitProducts} />
     </div>
   );
 };
