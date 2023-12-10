@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import logoLevis from "../../media/levi_s_logo.svg";
 import "./BrandProducts.css";
 
 // Slider arrows
@@ -75,7 +76,17 @@ const BrandProducts = ({ brandProducts }) => {
             <div key={indx} className="card">
               <img src={`http://localhost:1337${product?.image}`} alt="Image" />
               <div className="overlay">
-                <p>{product?.title}</p>
+                <p>
+                  {product?.title === "Levi's" ? (
+                    <img
+                      style={{ width: "12rem" }}
+                      src={logoLevis}
+                      alt="Levis"
+                    />
+                  ) : (
+                    product?.title
+                  )}
+                </p>
               </div>
             </div>
           ))}

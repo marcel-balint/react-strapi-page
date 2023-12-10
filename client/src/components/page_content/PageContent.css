@@ -23,7 +23,7 @@ article {
 }
 .article-text {
     top: 50%;
-    left: 43%;
+    left: 40%;
     transform: translate(-50% , -50%);
     position: absolute;
     color: #fff;

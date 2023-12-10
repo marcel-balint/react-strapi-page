@@ -17,9 +17,110 @@ nav{
     visibility: hidden;
     pointer-events: none;
 }
+
+.mobile-backdrop {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all .3s;
+}
+ .active-mobile { 
+    visibility: visible;
+    opacity: 1;
+    pointer-events: all;
+}
+.mobile-sidebar{
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    right: 20%;
+    bottom: 0;
+    padding: 3rem;
+}
 .nav-logo img {
-    width: 7.7rem;
+    width: 6.7rem;
     margin-left: 30%;
+}
+
+.mobile-logo {
+    width: 7.7rem;    
+}
+
+.mobile-nav {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+.mobile-nav li {
+    margin-bottom: 2rem;
+
+}
+.mobile-nav li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.mobile-images {
+    display: flex;
+    flex-direction: column;
+}
+.mobile-images img {
+    height: 20rem;
+    width: 100%;
+    opacity: .8;
+}
+.mobile-images__first {
+    position: relative;
+}
+.mobile-images__first p {
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    position: absolute;
+    padding: 2.7rem 5rem 2.7rem 5rem;
+    font-size: 2rem;
+    background-color: #fff;
+    color: blue;
+}
+
+.mobile-images__second {
+    position: relative;
+}
+
+.icons-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.icons-overlay img {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    height: 6rem;
+}
+
+.mobile-images__first img{
+    margin-bottom: 3rem;
+}
+
+.close-menu {
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    width: 4rem;
+    padding: 3rem;
 }
 .nav-profile {
     display: flex;
@@ -71,3 +172,48 @@ nav{
     font-size: 1.7rem;
     font-weight: 500;
 }
+
+
+@media only screen and (max-width: 1515px) {
+   nav{
+    width: 80%;
+   }
+  }
+
+  @media only screen and (max-width: 1405px) {
+   .nav-bottom {
+    width: 60%;
+   }
+  }
+
+  @media only screen and (max-width: 1135px) {
+   .nav-bottom {
+    width: 70%;
+   }
+  }
+
+  @media only screen and (max-width: 1000px){
+    .nav-bottom {
+        width: 80%;
+    }
+  } 
+
+
+  @media only screen and (max-width: 879px) {
+    .nav-bottom {
+        width: 90%;
+    }
+  }
+
+  @media only screen and (max-width: 767px){
+       nav {
+            width: 95%;
+        }
+      .nav-bottom {
+        display: none;
+      }
+      .mobile-menu {
+        visibility: visible;
+        pointer-events: all;
+      }
+  }

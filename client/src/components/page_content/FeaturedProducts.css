@@ -36,7 +36,7 @@
 .card .overlay {
     position: absolute;
     z-index: 5;
-    background: rgba(137, 196, 244, .3);
+    background: rgba(137, 196, 244, .2);
     top: 0;
     width: inherit;
     bottom: 0;
