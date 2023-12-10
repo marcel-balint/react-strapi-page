@@ -47,3 +47,19 @@
 .mobile-app__img img {
     height: 100%;
 }
+
+
+
+/*********** Media queries *******************/
+
+@media only screen and (max-width: 1070px) {
+  .mobile-app__img{
+    display: none;
+  }  
+}
+
+@media only screen and (max-width: 1038px) {
+    .download-banner__content {
+        width: 90%;
+    }
+}

@@ -167,3 +167,110 @@
 .terms a {
     text-decoration: none;
 }
+
+
+/*********** Media queries *******************/
+
+@media only screen and (max-width: 1170px) {
+  .footer-top_input input {
+    width: 35rem;
+  }
+}
+
+@media only screen and (max-width: 1110px){
+    .footer-top_input input {
+        width: 30rem;
+      }
+}
+
+@media only screen and (max-width: 1038px){
+    .footer-content{
+        width: 90%;
+    }
+    .footer-top_input input {
+        width: 25rem;
+      }
+}
+
+@media only screen and (max-width: 942px){
+    .footer-main{
+        flex-direction: column;
+    }
+    .footer-main__about,
+    .press,
+    .mobile-apps {
+        align-items: baseline;
+     }
+     .download-app{
+        text-align: left;
+     }
+     .footer-main__about ul {
+        padding: 0;
+     }
+}
+
+@media only screen and (max-width: 612px){
+    .footer-content {
+        padding-bottom: 7rem;
+    }
+    .footer-bottom{
+        flex-direction: column-reverse;
+        position: relative;
+    }
+    .copyright {
+        position: absolute;
+        bottom: -5rem;
+    
+    }
+    .social{
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+    }
+    .terms {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+    .terms a:first-child{
+        margin-bottom: 1rem;
+    }
+    .footer-main__about,
+    .press,
+    .download-app{
+        display: none;
+    }
+    .footer-main{
+        width: 61%;
+        margin: auto;
+    }
+    .footer-main__icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer-main__present p {
+        margin-bottom: 4rem;
+    }
+}
+
+@media only screen and (max-width: 591px){
+    .footer-top__text {
+        margin-right: 0px;
+    }
+    .footer-top{
+        flex-direction: column;
+    }
+    .footer-top_input input {
+        width: -webkit-fill-available;
+    }
+    .footer-top_input button {
+        width: 97.5%;
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 446px){
+    .footer-main{
+        width: 80%;
+    }
+}

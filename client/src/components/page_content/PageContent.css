@@ -64,3 +64,66 @@ article {
     color: rgba(137, 196, 244, .3);
     cursor: pointer;
 }
+
+/*********** Media queries *******************/
+
+@media only screen and (max-width: 1832px) {
+   .article-text{
+    left: 45%;
+   }
+}
+
+   
+@media only screen and (max-width: 1632px) {
+    .article-text{
+     left: 50%;
+    }
+}
+
+@media only screen and (max-width: 1480px){
+    .article-image__box {
+        width: unset;
+    }
+} 
+
+
+@media only screen and (max-width: 1396px){
+    .article-buttons {
+        flex-wrap: wrap;
+    }
+    .article-text{
+        left: 53%;
+        width: 100%;
+       }
+    .article-image__box {
+        text-align: start;
+        height: 25rem;
+    }
+    .article-buttons {
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1038px) {
+    .article-content {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 532px){
+    .article-image__box {
+        height: 30rem;
+    }
+    .article-buttons {
+        margin-bottom: 3rem;
+    }
+    .article-para {
+        padding-right: 4rem;
+    }
+}
+
+@media only screen and (max-width: 395px){
+    .article-image__box{
+        height: 40rem;
+    }
+}

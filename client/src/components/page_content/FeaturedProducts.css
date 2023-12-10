@@ -8,7 +8,7 @@
     height: 40rem;
 }
 .slick-slide div {
-     margin-right: 3rem;
+     margin-right: 2rem;
 }
 .slick-slide img {
     width: 100%;
@@ -25,12 +25,10 @@
     z-index: 1;
 }
 
-.card{
-    height: 40rem;
-}
-
 .card {
     position: relative;
+    height: 40rem;
+
 }
 
 .card .overlay {
@@ -58,4 +56,12 @@
 
 .slick-dots li button:before{
     font-size: 1.4rem;
+}
+
+/********** Media queries ******************/
+
+@media only screen and (max-width: 1038px) {
+    .featured-products__carousel {
+        width: 90%;
+    }
 }
