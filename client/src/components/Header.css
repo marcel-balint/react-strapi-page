@@ -114,3 +114,93 @@
     background-color: #ccc;
     color: #000;
 }
+
+/*********** Media queries *******************/
+
+
+@media only screen and (max-width: 1568px) {
+    .header-bottom {
+        width: 75%;
+    }
+    .header-bottom {
+        gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 1368px) {
+    .action-btns button {
+        width: 15rem;
+    }
+    .timmer h2 {
+        margin-right: 2rem;
+        font-size: 340%;
+    }
+}
+
+@media only screen and (max-width: 1097px) {
+  .timmer h2 {
+    margin-right: .5rem;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+ .hours p:nth-child(1), 
+ .minutes p:nth-child(1),
+ .seconds p:nth-child(1) {
+    font-size: 1.5rem;
+ }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+    header{
+        margin-bottom: 12rem;
+    }
+    .header-bottom {
+        width: 80%;
+        flex-direction: column;
+        height: unset;
+        position: relative;
+    }
+    .header-banner {
+        display: none;
+    }
+
+    .action-btns button {
+        width: 19rem;
+    }
+    .timmer  {
+        position: absolute;
+        bottom: -100px;
+        z-index: 1;
+    }
+    .timmer h2 {
+        margin-right: 3rem;
+      }
+    .time{
+        z-index: 5;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .header-bottom {
+        width: 80%;
+    }
+} 
+
+
+@media only screen and (max-width: 412px) {
+    .timmer h2{
+        font-size: 275%;
+    }
+    .time{
+        width: 17rem;
+    }
+}
+
+@media only screen and (max-width: 345px) {
+    .action-btns button {
+        width: 15rem;
+    }
+}

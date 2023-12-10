@@ -173,6 +173,7 @@ nav{
     font-weight: 500;
 }
 
+/*********** Media queries *******************/
 
 @media only screen and (max-width: 1515px) {
    nav{
@@ -205,7 +206,7 @@ nav{
     }
   }
 
-  @media only screen and (max-width: 767px){
+  @media only screen and (max-width: 768px){
        nav {
             width: 95%;
         }
@@ -216,4 +217,10 @@ nav{
         visibility: visible;
         pointer-events: all;
       }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .close-menu {
+        right: -10px;
+    }
   }
